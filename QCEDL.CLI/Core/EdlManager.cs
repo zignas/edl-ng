@@ -1522,7 +1522,7 @@ internal sealed class EdlManager(GlobalOptionsBinder globalOptions) : IDisposabl
         {
             StorageType.Nvme => 512,
             StorageType.Sdcc => 512,
-            StorageType.Spinor or StorageType.Ufs or StorageType.Nand or _ => 4096,
+            StorageType.Spinor or StorageType.Ufs or StorageType.Nand or _ => 512,
         };
 
         private static void ValidateLbaRange(ulong startSector, ulong sectorCount, ulong? totalSectors)
